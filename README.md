@@ -1,3 +1,7 @@
 # rubykoans
 fumblin through rubykoans tutorial
-test
+
+navigate into ./koans
+and then run ruby path_to_enlightenment.rb
+fix what it tells ya
+run it again!
