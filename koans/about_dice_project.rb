@@ -54,6 +54,8 @@ class AboutDiceProject < Neo::Koan
     # If the rolls are random, then it is possible (although not
     # likely) that two consecutive rolls are equal.  What would be a
     # better way to test this?
+
+    # check object IDs as well as their values?
   end
 
   def test_you_can_roll_different_numbers_of_dice
