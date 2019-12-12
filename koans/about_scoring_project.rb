@@ -36,7 +36,7 @@ def score(dice)
     count = dice.count(num)
     if count < 3 # if we have less than 3 instances of a number, we only do something if its 1 or 5
       num == 1 ? score += count*100 : num == 5 ? score += count*50 : score += 0 
-    elsif count >= 3 # if we have 3, we multiple the number by 100 or 1000; PLUS if its 1 or 5, add the extras
+    elsif count >= 3 # if we have 3, we multiple the number by 100 or 1000; PLUS if its 1 or 5, account for >3 rolls
       num == 1 ? score += 1000 + (count-3)*100 : num == 5 ? score += 5*100 + (count-3)*50 : score += num*100 
     end
   end
