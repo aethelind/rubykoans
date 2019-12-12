@@ -31,13 +31,23 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 def score(dice)
   score = 0
-  last = 0
-  counter = 1
-  
+  flag = 0
+
   dice.sort
 
   dice.each do |roll|
-    roll == 1 ? score += 100 : roll == 5 ? score += 50 : score
+    if dice.count(roll) >= 3
+      if flag == 0
+        roll == 1 ? score += 1000 : score += roll*100
+        flag++
+      elsif flag <= 3
+        flag++
+      else
+        roll == 1 ? score += 100 : roll == 5 ? score += 50 : score
+      end
+    else
+      roll == 1 ? score += 100 : roll == 5 ? score += 50 : score
+    end
   end
 
   score
